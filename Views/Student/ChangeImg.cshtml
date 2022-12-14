@@ -1,0 +1,11 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "ChangeImg";
+}
+
+<h1>ChangeImg</h1>
+<img src="/images/@Model.Stgimg" height="120" width="120"/>
+<form enctype="multipart/form-data" asp-action="ChangeImg" asp-controller="Student">
+    <input type="file" name="imgsrc"/>
+    <input type="submit" value="Update Image"/>
+</form>

@@ -1,0 +1,14 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<form asp-action="Create" asp-controller="Student" enctype="multipart/form-data">
+    <input asp-for="Name" placeholder="name"/><br>
+    <input asp-for="Age" placeholder="age"/><br>
+    <input type="file" name="img"/><br>
+     <input type="submit" class="btn btn-success"/>
+     
+</form>
+

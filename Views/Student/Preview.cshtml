@@ -1,0 +1,14 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Preview";
+}
+
+<h1>Preview</h1>
+<h1 class=" alert">
+    @Model.Id
+    @Model.Name
+    @Model.Age
+</h1>
+<img src="/images/@Model.Stgimg" height="150" width="150"/>
+<a asp-action="DisplayData" asp-controller="Student">List</a>
+

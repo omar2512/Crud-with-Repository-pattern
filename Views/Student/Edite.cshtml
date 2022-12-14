@@ -1,0 +1,14 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Edite";
+}
+
+<h1>Edite</h1>
+<form asp-action="Edite" asp-controller="Student" enctype="multipart/form-data">
+    <input asp-for="Id"/><br />
+     <input asp-for="Name"/><br />
+     <input asp-for="Age"/><br />
+    
+      <input type="submit" value="Update"/>
+
+</form>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Student>
+@{
+    ViewData["Title"] = "DisplayData";
+}
+
+<h1>DisplayData</h1>
+
+<table class=" table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>Age</th>
+            <th>image</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach(var items in Model)
+        {
+            <tr>
+                <td>@items.Id</td>
+                <td>@items.Name</td>
+                <td>@items.Age</td>
+                <td><img src="/images/@items.Stgimg" width="50" height="50"/></td>
+                <td><a href="/Student/Preview/@items.Id">Preview</a></td>
+                <td><a href="/Student/Edite/@items.Id">Update</a></td>
+                <td><a href="/Student/Deletes/@items.Id">Delete</a> </td>
+                <td><a href="/Student/Download/@items.Id">Download image</a></td>
+                 <td><a href="/Student/ChangeImg/@items.Id">Change image</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
